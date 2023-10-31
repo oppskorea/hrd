@@ -1,0 +1,390 @@
+@charset 'UTF-8';
+/* wess.tistory.com에서 본문폰트 사용할 css 연결 */
+@import url('https://webfontworld.github.io/pretendard/Pretendard.css');
+@import url('https://webfontworld.github.io/woori/Wooridaum.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0');
+
+/* 1. 전체 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. 개별 요소 초기화 */
+body {
+    font-size: 16px;
+    font-family: 'Pretendard', 'Wooridaum', 'Malgun Gothic', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Pretendard', 'Wooridaum', 'Malgun Gothic', sans-serif;
+}
+a {
+    /* 색상 #333, 텍스트꾸밈 없음 */
+    color: #333;
+    text-decoration: none;
+}
+ol, ul {
+    /* 리스트 스타일 없음 */
+    list-style-type: none;
+}
+img {
+    vertical-align: top;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+p {
+    margin: 1em 0;
+}
+
+/* 3. 공용클래스(자주 사용하는 디자인) */
+.wrap {
+    width: 1140px;
+    margin: auto;
+    /* background-color: #ccc; */
+}
+.clearfix:after { 
+    /* 플롯된 영역의 상위 영역 높이 해결 */
+    display: block;
+    clear: both;
+    content: '';
+}
+.sound-only {
+    /* 화면 바깥으로 보내버리기 */
+    position: absolute;
+    left: -9999em;
+}  
+.m0 {
+    margin: 0 !important;
+} 
+
+/* 글자와 배경색 */
+.fz-xxs {font-size: 0.8em;}
+.fz-xs {font-size: 0.85em;}
+.fz-s {font-size: 0.9em;}
+.fz-m {font-size: 1.2em;}
+.fz-l {font-size: 1.4em;}
+.fz-xl {font-size: 2.0em;}
+.fz-xxl {font-size: 2.0em;}
+
+.wh, .wh a {color: #fff;}
+.bk, .bk a {color: #000;}
+.bl, .bl a {color: #427BBE;}
+.or, .or a {color: #c55600;}
+.vl, .vl a {color: #7A6FCE;}
+.mt, .mt a {color: #6C9B9C;}
+
+/* 4. 영역별 디자인 */
+/* 4.1 바로가기, 빠른 메뉴 */
+#skip-menu {
+    
+}
+#skip-menu a {
+    position: fixed;
+    left: 0;
+    top: -60px;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    background-color: #427BBE;
+    color: #fff;
+    text-align: center;
+    z-index: 9999;
+}
+#skip-menu a:focus {
+    top: 0;
+}
+.quick-menu-wrap {
+    position: fixed;
+    left: calc(50% + 600px);
+    top: 140px;
+    width: 115px;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background-color: #f8f8f8;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-align: center;
+    /* box-shadow: 방향(inset일 때만 입력) hoff voff blur color */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.quick-menu-wrap h2 {
+    padding-left: 4px;
+    margin-bottom: 8px;
+    font-size: 1.25em;
+    color: #427BBE;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+}
+.quick-menu-wrap h2 span { /* + */
+    position: relative;
+    left: -3px;
+    top: -5px;
+    color: #FF4000;
+}
+.quick-menu {
+    
+}
+.quick-menu li {
+    margin: 3px 0;
+}
+.quick-menu li:last-child {
+    margin: 0;
+}
+.quick-menu li a {
+    display: block;
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    line-height: 1.2;
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+.quick-menu li a:hover {
+    border-color: #427BBE;
+    background-color: #427BBE;
+    color: #FFF;
+}
+
+/* 4.2 헤더 영역 */
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    padding-top: 36px;
+    background-color: #fff;
+    z-index: 100;
+}
+#header .wrap {}
+.logo-gnb-wrap {
+    /* background-color: #ff0; */
+}
+.logo {
+    float: left;
+    height: 42px;
+    margin: 16px 0;
+}
+.logo a {}
+.logo a img {}
+#hrd-gnb {
+    float: right;
+    /* background-color: #f0f0f0; */
+}
+.depth1 {
+    float: left;
+}
+.depth1 > a { /* 대메뉴 */
+    position: relative;
+    display: block;
+    padding: 0 62px;
+    line-height: 74px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+.depth1:last-child > a {
+    padding-right: 0;
+}
+.depth1 > a:after { /* 메인메뉴 호버시 나타나는 동그라미 */
+    display: none;
+    position: absolute;
+    left: calc(50% - 5px);
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #427BBE;
+    content: '';
+}
+.depth1:last-child > a:after {
+    margin-left: 31px; /* 오른쪽 패딩 62의 절반만큼 이동 */
+}
+/* gnb 동작, 메인메뉴 활성화(active), 서브메뉴 보이기 */
+.depth1:hover > a, .depth1:focus-within > a {
+    color: #427BBE;
+}
+.depth1:hover > a:after, .depth1:focus-within > a:after {
+    display: block;
+}
+.depth1:hover .depth2-container, .depth1:focus-within .depth2-container {
+    display: block;
+}
+.depth2-container { /* 서브메뉴 */
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: #f6f9fe;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+/* .depth1:nth-child(1) .depth2-container {
+    display: block;
+} */
+.depth2-wrap {}
+.depth2-title {
+    float: left;
+    width: 250px;
+    height: 300px;
+    margin: 0 50px 10px 20px;
+    background-position: 0 bottom;
+    background-repeat: no-repeat;
+}
+.gnb-bg1 {
+    background-image: url('../images/hrd_gnb1.png');
+}
+.gnb-bg2 {
+    background-image: url('../images/hrd_gnb2.png');
+}
+.gnb-bg3 {
+    background-image: url('../images/hrd_gnb3.png');
+}
+.depth2-title dt {
+    padding: 1.2em 0 0.3em;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #000;
+}
+.depth2-title dd {
+    font-size: 0.95em;
+}
+.depth2 {
+    position: relative;
+    float: left;
+    width: 820px;
+    margin-top: 1.7em;
+    /* background-color: #0f0; */
+}
+.depth2 > li {
+    float: left;
+    width: 33.3333%;
+    margin-bottom: 20px;
+}
+.depth2 > li > a {
+    /* 중간 서브 메뉴 */
+    display: inline-block;
+    min-width: 180px;
+    padding: 0 1.4em;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    line-height: 2.2;
+    background-color: #fff;
+    font-size: 0.95em;
+    text-align: center;
+}
+.depth3 {
+    padding-left: 1.5em;
+    margin-bottom: 20px;
+    font-size: 0.95em;
+    line-height: 2.2;
+}
+.depth3 > li {}
+.depth3 a {
+    display: block;
+}
+.m3-sub2 {
+    position: absolute;
+    left: 0;
+    top: 130px;
+}
+
+.util-menu {
+    position: absolute;
+    left: calc(50% + 215px);
+    top: 0;
+    /* background-color: #f00; */
+    line-height: 36px;
+    font-size: 0.95em;
+}
+.util-menu li {
+    float: left;
+    margin-left: 2em;
+}
+.util-menu li a {}
+.util-menu span { /* 크게, 작게 */
+    display: inline-block;
+}
+
+/* 4.3 메인 영역 */
+#main {
+    padding: 110px 0 80px;
+    /* background-color: #ff0; */
+}
+
+/* 4.4 푸터 영역 */
+#footer {
+    font-size: 0.95em;
+}
+.ft-menu-wrap {
+    padding: 1.5em 0;
+    border: 1px solid #ddd;
+    border-width: 1px 0;
+}
+.ft-menu {
+    line-height: 10px;
+    text-align: center;
+}
+.ft-menu li {
+    display: inline-block; /*한줄로 나열되는 블럭, 글자 같은 블럭*/
+    padding: 0 1.2em;
+    border-right: 1px solid #ddd;
+}
+.ft-menu li:last-child {
+    border-right-width: 0;
+}
+.ft-menu li a {}
+.ft-menu strong {
+    padding-bottom: 5px;
+    color: #427BBE;
+    /* text-decoration: underline; */
+    border-bottom: 2px solid #427bbe;
+}
+.ft-browser-wrap {
+    padding: 1em 0;
+    text-align: center;
+    background-color: rgba(66,123,190,0.1);
+    font-size: 1.2em;
+}
+.ft-browser-wrap strong {
+    color: #c55600;
+}
+.ft-info-wrap {
+    padding: 40px 0 80px;
+    border-top: 1px solid #ddd;
+}
+.ft-info-wrap img {
+    margin: 5px;
+    vertical-align: middle;
+}
+.ft-info-wrap .wrap {}
+.ft-org-logo {
+    float: left;
+}
+.ft-org-logo a {}
+.ft-wa-logo {
+    float: right;
+}
+.ft-wa-logo a {}
+.ft-wa-logo a:last-child img {
+    /* 이미지 크기 설정시 너비와 높이 둘 중 하나만 지정
+    나머지 수치 하나는 auto로 자동 계산됨*/
+    height: 52px;
+}
+.ft-info {
+    float: left;
+    width: 620px;
+    padding-top: 6px;
+    margin-left: 65px;
+    line-height: 2;
+}
+.ft-info strong {
+    color: #c55600;
+}

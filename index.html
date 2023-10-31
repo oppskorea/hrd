@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>HRD 따라하기</title>
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <? include_once('head.html'); ?>
+
+        <div id="main">
+            <div class="main-banner-container">
+                <h2 class="sound-only">메인비주얼</h2>
+                <!-- 1. 라디오버튼 생성 -->
+                <input type="radio" name="mb-radio" id="mb-radio1" checked>
+                <input type="radio" name="mb-radio" id="mb-radio2">
+                <input type="radio" name="mb-radio" id="mb-radio3">
+                <input type="radio" name="mb-radio" id="mb-radio4">
+                <!-- 2. 메인배너(비주얼) 슬라이드 생성 -->
+                <ol class="main-banner">
+                    <li class="mb-slide-item mb-slide-item1">
+                        <div class="wrap mb-slide-txt">
+                            오늘도 더 성장할 나를 위한<br>
+                            <strong>직업훈련 지식포털</strong>
+                        </div>
+                    </li>
+                    <li class="mb-slide-item mb-slide-item2">
+                        <div class="wrap mb-slide-txt">
+                            다양한 요구와 필요에 맞는<br>
+                            <strong>직업능력개발 지원제도</strong>
+                        </div>
+                    </li>
+                    <li class="mb-slide-item mb-slide-item3">
+                        <div class="wrap mb-slide-txt">
+                            내게 필요한 직업 훈련‧교육 코스가<br>
+                            <strong>한눈에 HRD-Net 훈련과정</strong>
+                        </div>
+                    </li>
+                    <li class="mb-slide-item mb-slide-item4">
+                        <div class="wrap mb-slide-txt">
+                            다양한 요구와 필요에 맞는<br>
+                            <strong>직업능력개발 지원제도</strong>
+                        </div>
+                    </li>
+                </ol>
+                <!-- 3. 콘트롤즈(이전, 다음) 생성 -->
+                <div class="mb-controls">
+                    <label for="mb-radio1" class="mb-btn mb-btn1"><span class="sound-only">1</span></label>
+                    <label for="mb-radio2" class="mb-btn mb-btn2"><span class="sound-only">2</span></label>
+                    <label for="mb-radio3" class="mb-btn mb-btn3"><span class="sound-only">3</span></label>
+                    <label for="mb-radio4" class="mb-btn mb-btn4"><span class="sound-only">4</span></label>
+                </div>
+                <!-- 4. 페이지 영역 생성 -->
+                <div class="mb-pagination">
+                    <label for="mb-radio1" class="mb-btn mb-btn1">1</label>
+                    <label for="mb-radio2" class="mb-btn mb-btn2">2</label>
+                    <label for="mb-radio3" class="mb-btn mb-btn3">3</label>
+                    <label for="mb-radio4" class="mb-btn mb-btn4">4</label>
+                </div>
+            </div>
+            <div class="wrap main-biz-container">
+                <h2><span class="h2-line">주요 훈련사업</span></h2>
+                <dl class="main-biz clearfix">
+                    <div class="biz-item">
+                        <dt class="sound-only">훈련사업명</dt>
+                        <dd class="biz-item-subject">중장년 경력설계<br> 카운슬링</dd>
+                        <dt class="sound-only">훈련사업 이미지</dt>
+                        <dd class="biz-item-img"><img src="images/traning_type_01.png" alt="관련이미지"></dd>
+                        <dt class="sound-only">훈련사업 개요</dt>
+                        <dd class="biz-item-txt">미래 대비 준비가 필요한 중소기업 재직중인 중장년 대상 1:1 맞춤형 경력설계 상담과정</dd>
+                        <dt class="sound-only">훈련사업 전체보기</dt>
+                        <dd><a href="#" class="biz-item-link">전체보기<i class="fa-solid fa-chevron-right"></i></a></dd>
+                    </div>
+                    <div class="biz-item">
+                        <dt class="sound-only">훈련사업명</dt>
+                        <dd class="biz-item-subject">K-디지털<br>트레이닝</dd>
+                        <dt class="sound-only">훈련사업 이미지</dt>
+                        <dd class="biz-item-img"><img src="images/traning_type_02.png" alt="관련이미지"></dd>
+                        <dt class="sound-only">훈련사업 개요</dt>
+                        <dd class="biz-item-txt">기업이 현장에서 필요로 하는 디지털‧신기술 핵심 실무인재에 도전해 보세요.</dd>
+                        <dt class="sound-only">훈련사업 전체보기</dt>
+                        <dd><a href="#" class="biz-item-link">전체보기<i class="fa-solid fa-chevron-right"></i></a></dd>
+                    </div>
+                    <div class="biz-item">
+                        <dt class="sound-only">훈련사업명</dt>
+                        <dd class="biz-item-subject">K-디지털<br>기초역량훈련</dd>
+                        <dt class="sound-only">훈련사업 이미지</dt>
+                        <dd class="biz-item-img"><img src="images/traning_type_03.png" alt="관련이미지"></dd>
+                        <dt class="sound-only">훈련사업 개요</dt>
+                        <dd class="biz-item-txt">기초코딩, 웹‧앱개발 등 배경지식이 전혀 없어도 입문 과정부터 지원</dd>
+                        <dt class="sound-only">훈련사업 전체보기</dt>
+                        <dd><a href="#" class="biz-item-link">전체보기<i class="fa-solid fa-chevron-right"></i></a></dd>
+                    </div>
+                    <div class="biz-item">
+                        <dt class="sound-only">훈련사업명</dt>
+                        <dd class="biz-item-subject">산업구조변화대응<br>등 특화훈련</dd>
+                        <dt class="sound-only">훈련사업 이미지</dt>
+                        <dd class="biz-item-img"><img src="images/traning_type_04.png" alt="관련이미지"></dd>
+                        <dt class="sound-only">훈련사업 개요</dt>
+                        <dd class="biz-item-txt">산업구조변화 흐름에 대응하여 지역별 현장 수요를 반영한 훈련과정 제공</dd>
+                        <dt class="sound-only">훈련사업 전체보기</dt>
+                        <dd><a href="#" class="biz-item-link">전체보기<i class="fa-solid fa-chevron-right"></i></a></dd>
+                    </div>
+                </dl>
+            </div>
+            <div class="wrap main-notice-container clearfix">
+                <div class="notice-wrap">
+                    <h2><span class="h2-line">공지사항</span></h2>
+                    <table class="notice">
+                        <caption class="sound-only">공지사항 최신글 5개</caption>
+                        <thead class="sound-only">
+                            <tr>
+                                <th scope="col">분류</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">날짜</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="notice-cate"><span class="cate-notice">공지</span></td>
+                                <td class="notice-subject"><div>출결서비스 변경 예정에 따른 출결기기등록 요청 안내</div></td>
+                                <td class="notice-date">2023-07-31</td>
+                            </tr>
+                            <tr>
+                                <td class="notice-cate"><span class="cate-guide">안내</span></td>
+                                <td class="notice-subject"><div>2023년 해외일경험(WELL)프로그램 3차 참여 청년 모집</div></td>
+                                <td class="notice-date">2023-07-18</td>
+                            </tr>
+                            <tr>
+                                <td class="notice-cate"><span class="cate-guide">안내</span></td>
+                                <td class="notice-subject"><div>고용부 미래내일일경험사업 2차 통합공고 청년 신청 안내</div></td>
+                                <td class="notice-date">2023-07-14</td>
+                            </tr>
+                            <tr>
+                                <td class="notice-cate"><span class="cate-report">알림</span></td>
+                                <td class="notice-subject"><div>비콘 출결관련 장애로 인한 조치완료 안내 및 출석직권처리요청(조치완료, 9시 25분)</div></td>
+                                <td class="notice-date">2023-07-13</td>
+                            </tr>
+                            <tr>
+                                <td class="notice-cate"><span class="cate-notice">공지</span></td>
+                                <td class="notice-subject"><div>HRD-Net 개인정보 인증 강화 안내</div></td>
+                                <td class="notice-date">2023-07-08</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="../g5/bbs/board.php?bo_table=hrd_notice" class="btn-go">바로가기 <i class="fa-solid fa-chevron-right"></i></a>
+                </div><!--notice-wrap E-->
+                <div class="location-wrap">
+                    <h2><span class="h2-line">기관검색</span></h2>
+                    <ul class="location clearfix">
+                        <li class="location-item1">
+                            <a href="#">
+                                <strong>고용센터</strong>
+                                <span>바로가기</span>
+                            </a>
+                        </li>
+                        <li class="location-item2">
+                            <a href="#">
+                                <strong>한국산업<br>인력공단</strong>
+                                <span>바로가기</span>
+                            </a>
+                        </li>
+                        <li class="location-item3">
+                            <a href="#">
+                                <strong>훈련기관</strong>
+                                <span>바로가기</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn-go">바로가기 <i class="fa-solid fa-chevron-right"></i></a>
+                </div><!--location-wrap E-->
+            </div><!--main-notice-container E-->
+        </div><!--main E-->
+         
+        <? include_once('foot.html'); ?>
+    </body>
+</html>
